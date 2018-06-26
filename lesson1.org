@@ -1,0 +1,66 @@
+* Javascript
+** Introduction
+*** Interpreted Languages
+**** Code is compiled at run time.
+**** Similar to python
+*** Dynamic Language
+** Types
+*** String
+**** Quotes ' or "
+**** String interpolation
+*** Numbers
+**** No different types of numbers
+*** Boolean
+*** Date
+*** Comparison
+**** ==
+**** ===
+*** Undefined vs Null
+** Objects
+*** Curly Braces
+*** Doesn't necessarily need to fit to a particular definition
+*** Prototype (similar to classes)
+** Functions
+*** As Objects
+*** Lambdas
+* TypeScript
+** Introduction
+*** Transpiling
+*** Polyfill
+**** MDN (Mozilla Development Network)
+** Interfaces and Classes
+interface Person {
+    firstName: string;
+    lastName: string;
+}
+
+function greeter(person: Person) {
+    return "Hello, " + person.firstName + " " + person.lastName;
+}
+
+let user = { firstName: "Jane", lastName: "User" };
+
+document.body.innerHTML = greeter(user);
+* ES6 (modules)
+** Import statements
+*** multiple exports:
+import { bindable, customElement, autoinject } from "aurelia-framework";
+*** Single default export
+import ProtocolVisit from 'models/protocol-visit';
+*** no export defined
+import * as _ from 'lodash';
+* Angular
+** Before MVP and MVC
+Before these ui design patterns existed there were was a lot of spaghetti code due to code dealing with data,
+rendering, and application logic. In order to help separate these out two primary design patterns emerged for
+enterprise applications. MVC is the one we'll be covering now.
+** MVC
+*** Models
+Supposed to be just data for the most part which allows other classes to manipulate and pass data using the
+models.
+*** View
+Logic that encompasses and is involved with manipulating the UI to render the data and handle interactions
+with the UI.
+*** Controller
+Responsible for handling retrieving of data and persisting data. Along with any non-user manipulations of data
+that can occur.
